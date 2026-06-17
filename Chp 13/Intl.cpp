@@ -1,18 +1,18 @@
-﻿// Grad.cpp
+﻿// Intl.cpp
 #include <algorithm>
 #include <vector>
 
-#include "Grad.h"
+#include "Intl.h"
 
 istream& read_hw(istream& in, vector<double>& hw);
 
-istream& Grad::read(istream& in) {
+istream& Intl::read(istream& in) {
 	Core::read_common(in);
-	in >> thesis;
+	in >> toeic;
 	read_hw(in, homework); // ??
 	return in;
 }
 
-double Grad::grade() const {
-	return min(Core::grade(), thesis);
+double Intl::grade() const {
+	return min(Core::grade(), toeic);
 }
